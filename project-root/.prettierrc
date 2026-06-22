@@ -1,0 +1,9 @@
+{
+    "plugins": ["@prettier/plugin-php", "prettier-plugin-blade"],
+    "__instal npm": "npm i -D prettier @prettier/plugin-php prettier-plugin-blade --legacy-peer-deps",
+    "printWidth": 120,
+    "singleQuote": true,
+    "singleAttributePerLine": false,
+    "wrapAttributes": "preserve",
+    "bracketSameLine": true
+}
