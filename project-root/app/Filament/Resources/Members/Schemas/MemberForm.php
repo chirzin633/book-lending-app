@@ -14,24 +14,40 @@ class MemberForm
         return $schema
             ->components([
                 TextInput::make('member_code')
-                    ->unique(ignoreRecord: true)
                     ->label('Member Code')
-                    ->required(),
+                    ->disabled()
+                    ->default(function () {
+                        $year = now()->format('Y');
+                        $random = str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
+                        return 'LIB' . $year . $random;
+                    }),
+
                 TextInput::make('name')
                     ->required(),
+
                 TextInput::make('phone')
                     ->tel()
                     ->required(),
+
                 TextInput::make('email')
                     ->label('Email address')
                     ->nullable()
                     ->email(),
+
                 Select::make('status')
                     ->options(['active' => 'Active', 'inactive' => 'Inactive'])
                     ->default('active')
                     ->required(),
-                DatePicker::make('registered_at')->label('Registered Date'),
-                DatePicker::make('expired_at')->label('Expired Date'),
+
+                DatePicker::make('registered_at')
+                    ->label('Registered Date')
+                    ->default(now())
+                    ->disabled(),
+
+                DatePicker::make('expired_at')
+                    ->default(now()->addYear())
+                    ->disabled()
+                    ->label('Expired Date'),
             ]);
     }
 }
