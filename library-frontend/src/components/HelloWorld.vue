@@ -15,7 +15,7 @@ const kurang = () => {
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col justify-center items-center gap-3 min-h-screen">
     <h1 class="font-bold text-teal-600 text-3xl text-center uppercase">
       Ini halaman front end
     </h1>
@@ -25,8 +25,18 @@ const kurang = () => {
     </p>
 
     <div class="flex justify-center gap-2">
-      <button @click="tambah" class="bg-slate-400 px-3 py-1 w-10">+</button>
-      <button @click="kurang" class="bg-slate-400 px-3 py-1 w-10">-</button>
+      <button
+        @click="tambah"
+        class="bg-slate-400 px-3 py-1 w-10 cursor-pointer"
+      >
+        +
+      </button>
+      <button
+        @click="kurang"
+        class="bg-slate-400 px-3 py-1 w-10 cursor-pointer"
+      >
+        -
+      </button>
     </div>
   </div>
 </template>
