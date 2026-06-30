@@ -17,6 +17,12 @@ import { RouterLink } from "vue-router";
           <RouterLink to="/" class="block hover:bg-gray-100 px-3 py-2 rounded"
             >Home</RouterLink
           >
+
+          <RouterLink
+            to="/catalog"
+            class="block hover:bg-gray-100 px-3 py-2 rounded"
+            >Catalog</RouterLink
+          >
         </nav>
       </aside>
 
