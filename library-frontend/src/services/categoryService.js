@@ -1,9 +1,11 @@
 import api from "./api.js";
 
-export const getCategories = () => {
+const getCategories = () => {
   return api.get("/categories");
 };
 
-export const getCategory = (id) => {
+const getCategory = (id) => {
   return api.get(`/categories/${id}`);
 };
+
+export { getCategory, getCategories };

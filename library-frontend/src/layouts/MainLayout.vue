@@ -23,6 +23,18 @@ import { RouterLink } from "vue-router";
             class="block hover:bg-gray-100 px-3 py-2 rounded"
             >Catalog</RouterLink
           >
+
+          <RouterLink
+            to="/categories"
+            class="block hover:bg-gray-100 px-3 py-2 rounded"
+            >Category</RouterLink
+          >
+
+          <RouterLink
+            to="/loans"
+            class="block hover:bg-gray-100 px-3 py-2 rounded"
+            >Loan</RouterLink
+          >
         </nav>
       </aside>
 

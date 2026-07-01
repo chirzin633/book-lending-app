@@ -7,3 +7,5 @@ const getLoans = () => {
 const getLoan = (id) => {
   return api.get(`/loans/${id}`);
 };
+
+export { getLoan, getLoans };
